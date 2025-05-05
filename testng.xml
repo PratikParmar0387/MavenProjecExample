@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All Test Suite">
+    <groups>
+        <run>
+            <include name="smoke"></include>
+        </run>
+    </groups>
+    <listeners >
+        <listener class-name="FailTestRun.IAnnotation"></listener>
+        
+    </listeners>
+    <parameter name= "coursename" value="selenium"> </parameter>
+    <parameter name = "cityname" value = "Delhi"> </parameter>
+    <test verbose="2" preserve-order="true" name="C:/Users/pratik/IdeaProjects/MavenProjecExample">
+        <classes>
+            <class name="testngexample.DependsOnGExample">
+                <methods>
+                    <include name="verifyOnBoarding"/>
+                </methods>
+            </class>
+            <class name="testngexample.DependsOnMethod">
+                <methods>
+                    <include name="verifyLogin"/>
+                    <include name="verifyHomepage"/>
+                    <include name="verifyOnBoarding"/>
+                </methods>
+            </class>
+            <class name="testngexample.PriorityExample">
+                <methods>
+                    <include name="testZ"/>
+                    <include name="testH"/>
+                    <include name="testA"/>
+                </methods>
+            </class>
+            <class name="testngexample.TestNGAttribute">
+                <methods>
+                    <include name="attributeExample"/>
+                </methods>
+            </class>
+            <class name="testngexample.TestNGFirstExample">
+                <methods>
+                    <include name="verifyFirstTest"/>
+                    <include name="verifyFirst1Test"/>
+                    <include name="verifyFirst2Test"/>
+                </methods>
+            </class>
+            <class name="testngexample.TestNgAnnotationExample">
+                <methods>
+                    <include name="verifyGoogle"/>
+                    <include name="verifyReddifmail"/>
+                    <include name="verifyAmazon"/>
+                </methods>
+            </class>
+            <class name ="parameterizationexample.ParameterizationExample">
+
+            </class>
+        </classes>
+    </test>
+</suite>
