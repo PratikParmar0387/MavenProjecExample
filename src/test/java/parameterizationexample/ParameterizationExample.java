@@ -23,7 +23,7 @@ public class ParameterizationExample {
         serchTextBox.sendKeys(Keys.ENTER);
 
         Thread.sleep(1000);
-        driver.close();
+
 
     }
 
